@@ -9,6 +9,11 @@ import AdminHome from './page/admin/home';
 import LoginAdmin from './page/admin/login';
 import News from './page/user/news';
 import Contact from './page/user/contact';
+import Broadband from './page/user/ourProduct/broadband';
+import Enterprise from './page/user/ourProduct/enterprice';
+import Business from './page/user/ourProduct/business';
+import Mgm from './page/user/mgm';
+import AllNews from './page/user/allNews';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +25,12 @@ const App: React.FC = () => {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="news" element={<News />} />
+        <Route path="news/all" element={<AllNews />} />
+        <Route path="mgm" element={<Mgm />} />
+        {/* Our Product */}
+        <Route path="hanaplay/broadband" element={<Broadband />} />
+        <Route path="hanaplay/enterprise" element={<Enterprise />} />
+        <Route path="hanaplay/business" element={<Business />} />
       </Route>
 
       {/* admin path */}

@@ -3,7 +3,7 @@ import { FaHeadset, FaComments, FaMapMarkedAlt } from 'react-icons/fa'; // Gunak
 
 const SupportService: React.FC = () => {
   return (
-    <section className="bg-blue-900 text-white py-16">
+    <section className="bg-blue-900 w-full text-white py-16">
       <div className="container mx-auto text-center">
         {/* Pertanyaan */}
         <h2 className="text-xl font-light mb-2">Have you any questions</h2>

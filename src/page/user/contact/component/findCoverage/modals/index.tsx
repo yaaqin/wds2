@@ -1,14 +1,14 @@
 import React from 'react'
-import MonaLoad from '../animate/monalisaLoading';
-interface upcomingProps {
+import MonaLoad from '../../../../../../component/animate/monalisaLoading';
+
+interface coverageProps {
   showModal: boolean
   CloseModal: (value: boolean) => void;
 }
-
-export default function Upcoming({
+export default function CoverageList({
   showModal,
   CloseModal
-}: upcomingProps) {
+}: coverageProps) {
   return (
     <div className={
       showModal ? 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' : 'hidden'
@@ -19,6 +19,5 @@ export default function Upcoming({
         <div onClick={() => CloseModal(false)} className='cursor-pointer text-[#fff] px-[24px] py-[8px] rounded-[12px] bg-blue-500 mt-[24px]'>kembali</div>
       </div>
     </div>
-
   )
 }

@@ -7,32 +7,26 @@ interface PricingCardProps {
   price: string;
   features: string[];
   color: string;
-  icon: string
 }
 
-const PricingCard: React.FC<PricingCardProps> = ({ title, downloadSpeed, uploadSpeed, price, features, color, icon }) => {
+const PricingCard: React.FC<PricingCardProps> = ({ title, downloadSpeed, uploadSpeed, price, features, color }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
       <div className={`p-6 text-white ${color} font-bold text-center`}>
         {title}
       </div>
       <div className="p-6">
-        <div className='flex gap-[16px] justify-between'>
           <div>
             <div className="mb-4">
-              <div className="text-blue-500 font-semibold">DOWNLOAD</div>
-              <div className="text-4xl font-bold">{downloadSpeed}</div>
-              <div className="text-sm text-gray-500">Download Speeds</div>
+              <div className="text-center text-blue-500 font-semibold">DOWNLOAD</div>
+              <div className="text-center text-4xl font-bold">{downloadSpeed}</div>
+              <div className="text-center text-sm text-gray-500">Download Speeds</div>
             </div>
             <div className="mb-4">
-              <div className="text-blue-500 font-semibold">UPLOAD</div>
-              <div className="text-4xl font-bold">{uploadSpeed}</div>
-              <div className="text-sm text-gray-500">Upload Speeds</div>
+              <div className="text-center text-blue-500 font-semibold">UPLOAD</div>
+              <div className="text-center text-4xl font-bold">{uploadSpeed}</div>
+              <div className="text-center text-sm text-gray-500">Upload Speeds</div>
             </div>
-          </div>
-          <div className='flex justify-center items-center'>
-          <img src={icon} alt='' className='w-[200px] h-[120px]'></img>
-          </div>
         </div>
         <div className="my-4">
           <ul className="space-y-2 text-sm text-gray-700">

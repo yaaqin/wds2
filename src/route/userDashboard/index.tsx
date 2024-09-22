@@ -6,7 +6,9 @@ import Footer from '../../component/footer'
 export default function UserDashboard() {
   return (
     <div>
+      <section className='sticky top-0 z-50'>
     <Navbar />
+      </section>
     <main>
       <Outlet />
     </main>

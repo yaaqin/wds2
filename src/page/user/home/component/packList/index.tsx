@@ -18,8 +18,8 @@ const PackList: React.FC = () => {
             uploadSpeed={plan.uploadSpeed}
             price={plan.price}
             features={plan.features}
-            color={plan.color}
-          />
+            color={plan.color} 
+            icon={plan.icon}          />
         ))}
       </div>
       <div className="text-center mt-12">

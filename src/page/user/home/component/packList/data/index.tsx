@@ -10,6 +10,7 @@ export const pricingData = [
         'Gratis installasi sebesar 500rb',
       ],
       color: 'bg-gradient-to-r from-purple-600 to-blue-500',
+      icon: 'https://www.wds.co.id/wp-content/uploads/2024/06/medium-1024x597.png'
     },
     {
       title: 'PREMIUM',
@@ -22,6 +23,7 @@ export const pricingData = [
         'Gratis installasi sebesar 500rb',
       ],
       color: 'bg-gradient-to-r from-purple-600 to-purple-400',
+      icon: 'https://www.wds.co.id/wp-content/uploads/2024/06/med-1024x597.png'
     },
     {
       title: 'Ultra',
@@ -34,6 +36,7 @@ export const pricingData = [
         'Gratis installasi sebesar 500rb',
       ],
       color: 'bg-gradient-to-r from-purple-600 to-pink-400',
+      icon: 'https://www.wds.co.id/wp-content/uploads/2024/06/high-1024x597.png'
     },
   ];
   

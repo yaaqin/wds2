@@ -21,8 +21,8 @@ const Card: React.FC<CardProps> = ({ title, description, icon }) => {
 
 const WhyChooseUs: React.FC = () => {
   return (
-    <section className="bg-gray-100 py-16">
-      <div className="container mx-auto text-center">
+    <section className="bg-gray-100 w-full py-16">
+      <div className="mx-auto text-center max-w-[1480px]">
         <h2 className="text-2xl font-bold mb-4">Why Choose Us</h2>
         <p className="text-gray-600 mb-8">
           WDS menyediakan solusi yang terbaik, dirancang untuk keperluan internet Anda. Dibantu dengan Customer Support yang ramah, cepat, dan handal dalam merespon penanganan yang tepat.

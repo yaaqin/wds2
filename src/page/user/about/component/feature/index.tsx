@@ -26,8 +26,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) =
 
 const Features: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 py-16">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="bg-gradient-to-r w-full from-purple-400 via-purple-500 to-purple-600 py-16">
+      <div className="max-w-[1480px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <FeatureCard
           icon={<SupportIcon />}
           title="24/7 Support"
