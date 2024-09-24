@@ -14,6 +14,8 @@ import Enterprise from './page/user/ourProduct/enterprice';
 import Business from './page/user/ourProduct/business';
 import Mgm from './page/user/mgm';
 import AllNews from './page/user/allNews';
+import RegistrationFlow from './page/user/support/registratiotonFlow';
+import LoginForm from './page/auth/login';
 
 const App: React.FC = () => {
   return (
@@ -26,12 +28,16 @@ const App: React.FC = () => {
         <Route path="contact" element={<Contact />} />
         <Route path="news" element={<News />} />
         <Route path="news/all" element={<AllNews />} />
-        <Route path="mgm" element={<Mgm />} />
         {/* Our Product */}
         <Route path="hanaplay/broadband" element={<Broadband />} />
         <Route path="hanaplay/enterprise" element={<Enterprise />} />
         <Route path="hanaplay/business" element={<Business />} />
+        {/* secondary path */}
+        <Route path="mgm" element={<Mgm />} />
+        <Route path="support/registration-flow" element={<RegistrationFlow />} />
       </Route>
+      {/* auth path */}
+      <Route path="/login" element={<LoginForm />}/>
 
       {/* admin path */}
       <Route path="/admin" element={<AdminDashboard />}>
