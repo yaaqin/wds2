@@ -2,8 +2,9 @@ import React from 'react';
 
 const ContactSection: React.FC = () => {
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <section className="bg-gray-50 py-16 w-full">
+      <div className='container mx-auto'>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
         {/* Left Side - Contact Information */}
         <div className="bg-blue-500 text-white p-8 rounded-lg shadow-lg">
@@ -164,6 +165,7 @@ const ContactSection: React.FC = () => {
           </form>
         </div>
 
+      </div>
       </div>
     </section>
   );

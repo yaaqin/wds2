@@ -1,41 +1,43 @@
-import React from 'react'
+import React from 'react';
 import { FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-export default function Footer() {
+interface SocialIconProps {
+  href: string;
+  icon: React.ReactNode;
+}
+
+const SocialIcon: React.FC<SocialIconProps> = ({ href, icon }) => (
+  <a href={href} className="text-white hover:text-gray-400 transition-colors duration-300">
+    {icon}
+  </a>
+);
+
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="flex flex-col items-center space-y-6">
-        <div className='w-full max-w-[1480px] flex justify-between'>
+    <footer className="bg-gray-900 text-white py-8 px-4">
+      <div className="max-w-[1480px] mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Logo */}
-            <img src="/assets/img/logo.png" alt="WDS Logo" className="h-16" />
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
+            <img src="/assets/img/logo.png" alt="WDS Logo" className="h-12 md:h-16" />
+          </div>
 
           {/* Ikon Social Media */}
-          <div className="flex justify-start gap-[24px] items-center">
-            <a href="#" className="text-white hover:text-gray-400">
-              <FaTwitter size={24} />
-            </a>
-            <a href="#" className="text-white hover:text-gray-400">
-              <FaFacebookF size={24} />
-            </a>
-            <a href="#" className="text-white hover:text-gray-400 flex items-center space-x-2">
-              <FaInstagram size={24} />
-            </a>
-            <a href="#" className="text-white hover:text-gray-400">
-              <FaYoutube size={24} />
-            </a>
+          <div className="flex justify-center md:justify-end gap-6 items-center">
+            <SocialIcon href="#" icon={<FaTwitter size={24} />} />
+            <SocialIcon href="#" icon={<FaFacebookF size={24} />} />
+            <SocialIcon href="#" icon={<FaInstagram size={24} />} />
+            <SocialIcon href="#" icon={<FaYoutube size={24} />} />
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-gray-400 text-sm">
-          © 2024 WDS. All Rights Reserved
+        <div className="text-center text-gray-400 text-sm mt-6">
+          © {new Date().getFullYear()} WDS. All Rights Reserved
         </div>
-
-        {/* Nama pembuat */}
-        {/* <div className="text-center text-gray-500 text-sm mt-2">
-          Created by <span className="font-semibold text-white">Yaaqin</span>
-        </div> */}
       </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;

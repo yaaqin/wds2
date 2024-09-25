@@ -10,7 +10,7 @@ export default function Broadband() {
     <div>
       {/* <Heading/> */}
       <BisnisHero/>
-      {/* <HanaPlaySubscription/> */}
+      <HanaPlaySubscription/>
       <ProdList/>
       <CityCoverageSection/>
     </div>

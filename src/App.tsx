@@ -16,6 +16,9 @@ import Mgm from './page/user/mgm';
 import AllNews from './page/user/allNews';
 import RegistrationFlow from './page/user/support/registratiotonFlow';
 import LoginForm from './page/auth/login';
+import PayFlow from './page/user/support/payFlow';
+import Registration from './page/user/registration';
+import OrderCheck from './page/user/Order';
 
 const App: React.FC = () => {
   return (
@@ -34,7 +37,10 @@ const App: React.FC = () => {
         <Route path="hanaplay/business" element={<Business />} />
         {/* secondary path */}
         <Route path="mgm" element={<Mgm />} />
+        <Route path="registration" element={<Registration />} />
+        <Route path="order-check" element={<OrderCheck />} />
         <Route path="support/registration-flow" element={<RegistrationFlow />} />
+        <Route path="support/how-to-pay" element={<PayFlow />} />
       </Route>
       {/* auth path */}
       <Route path="/login" element={<LoginForm />}/>
