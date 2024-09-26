@@ -4,6 +4,7 @@ import Features from './component/feature'
 import WhyChooseUs from './component/reason'
 import BenefitsSection from './component/head'
 import Heading from '../../../component/heading'
+import Slider from './component/slider'
 
 export default function About() {
   return (
@@ -12,8 +13,8 @@ export default function About() {
       <BenefitsSection/>
       <ServiceSection />
       <Features />
+      <Slider/>
       <WhyChooseUs/>
-      <img alt='' src='https://www.wds.co.id/wp-content/uploads/2024/06/PAGE-6-01-1024x576.jpg' className='max-w-[1480px] my-[24px]'></img>
     </div>
   )
 }
