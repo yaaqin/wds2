@@ -39,7 +39,7 @@ const FormComponent: React.FC = () => {
             id="customerID"
             name="customerID"
             placeholder="Contoh 123456"
-            className="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
             value={formData.customerID}
             onChange={handleInputChange}
             required
@@ -56,7 +56,7 @@ const FormComponent: React.FC = () => {
             id="friendName"
             name="friendName"
             placeholder="Nama Temanmu"
-            className="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
             value={formData.friendName}
             onChange={handleInputChange}
             required
@@ -73,7 +73,7 @@ const FormComponent: React.FC = () => {
             id="friendPhone"
             name="friendPhone"
             placeholder="62 432 3423423"
-            className="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
             value={formData.friendPhone}
             onChange={handleInputChange}
             required
@@ -91,7 +91,7 @@ const FormComponent: React.FC = () => {
             id="friendEmail"
             name="friendEmail"
             placeholder="emailtemanmu@domain.com"
-            className="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-600"
             value={formData.friendEmail}
             onChange={handleInputChange}
             required
@@ -104,7 +104,7 @@ const FormComponent: React.FC = () => {
             <input
               type="checkbox"
               name="agreement"
-              className="form-checkbox h-5 w-5 text-purple-600 border-gray-300 rounded"
+              className="form-checkbox h-5 w-5 text-blue-600 border-gray-300 rounded"
               checked={formData.agreement}
               onChange={handleInputChange}
               required
@@ -118,7 +118,7 @@ const FormComponent: React.FC = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-900 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition duration-300"
+          className="w-full bg-blue-900 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
         >
           Kirim
         </button>

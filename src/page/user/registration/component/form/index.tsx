@@ -7,7 +7,7 @@ interface SidebarItemProps {
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ label, active }) => (
-    <div className={`py-2 px-4 ${active ? 'bg-purple-100 text-purple-600 font-semibold' : 'text-gray-700'} hover:bg-purple-50 cursor-pointer`}>
+    <div className={`py-2 px-4 ${active ? 'bg-blue-100 text-blue-600 font-semibold' : 'text-gray-700'} hover:bg-blue-50 cursor-pointer`}>
         {label}
     </div>
 );
@@ -16,11 +16,11 @@ const RegistrationForm: React.FC = () => {
     const [selectedNeed, setSelectedNeed] = useState<string | null>(null);
 
     return (
-        <div className="flex w-full py-8 bg-gradient-to-r from-red-50 to-blue-100">
-            <div className='max-w-[1480px] flex mx-auto'>
+        <div className="flex w-full py-8 min-h-screen flex items-center justify-center bg-gradient-to-r from-rose-50 via-blue-50 to-indigo-100">
+            <div className='max-w-[1480px] flex mx-auto shadow-xl rounded-xl bg-white/30 backdrop-blur-lg'>
 
                 {/* Sidebar */}
-                <div className="w-1/4 bg-gray-100 p-4">
+                <div className="w-1/4 p-4">
                     <SidebarItem label="Data Diri" active={true} />
                     <SidebarItem label="Lokasi Pemasangan" active={false} />
                     <SidebarItem label="Pilih Paket" active={false} />
@@ -28,7 +28,7 @@ const RegistrationForm: React.FC = () => {
                 </div>
 
                 {/* Main Content */}
-                <div className="w-3/4 p-8 bg-[#F5F5F1]">
+                <div className="w-3/4 p-8">
                     <h2 className="text-2xl font-bold mb-6">Data Diri</h2>
                     <p className="text-gray-600 mb-4">Semua data ini wajib di isi untuk kebutuhan proses pemesanan Kamu.</p>
 
@@ -95,7 +95,7 @@ const RegistrationForm: React.FC = () => {
                                         key={need.label}
                                         type="button"
                                         onClick={() => setSelectedNeed(need.label)}
-                                        className={`flex items-center justify-center p-4 rounded-lg ${selectedNeed === need.label ? 'bg-purple-600 text-white' : 'bg-gray-100 text-gray-700'
+                                        className={`flex items-center justify-center p-4 rounded-lg ${selectedNeed === need.label ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
                                             }`}
                                     >
                                         {need.icon}
@@ -118,7 +118,7 @@ const RegistrationForm: React.FC = () => {
                                 <h3 className="font-bold">Lokasi Pemasangan</h3>
                                 <FaChevronDown className="text-gray-400" />
                             </div>
-                            <p className="text-sm text-gray-500">Cek apakah MyRepublic sudah mencakup lokasi Kamu</p>
+                            <p className="text-sm text-gray-500">Cek apakah HanaPlay sudah mencakup lokasi Kamu</p>
                         </div>
 
                         {/* Pilih Paket */}
@@ -143,7 +143,7 @@ const RegistrationForm: React.FC = () => {
                                     type="text"
                                     placeholder="Masukkan kode promo"
                                 />
-                                <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-r">
+                                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">
                                     Terapkan
                                 </button>
                             </div>

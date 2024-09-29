@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaHeadset, FaComments, FaMapMarkedAlt } from 'react-icons/fa'; // Gunakan ikon dari react-icons
+import useGsapScrollTrigger from '../../../../../component/gsapHook';
 
 const SupportService: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useGsapScrollTrigger(sectionRef);
   return (
-    <section className="bg-blue-900 w-full text-white py-16">
+    <section 
+    ref={sectionRef}
+    className="bg-blue-900 w-full text-white py-16">
       <div className="container mx-auto text-center">
         {/* Pertanyaan */}
         <h2 className="text-xl font-light mb-2">Have you any questions</h2>

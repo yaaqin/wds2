@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FaCloud, FaGlobe, FaNetworkWired, FaShieldAlt } from 'react-icons/fa';
 import ServiceCard from './card';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import useGsapScrollTrigger from '../../../../../component/gsapHook';
 
 const ServiceSection: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useGsapScrollTrigger(sectionRef);
   return (
-    <section className="container mx-auto py-16 text-center">
+    <section 
+      ref={sectionRef}
+      className="container mx-auto py-16 text-center">
       {/* Judul utama */}
       <h2 className="text-2xl font-semibold mb-4">Hanaplay Broadband Internet</h2>
       <p className="text-gray-500 mb-12">Network Solutions from Hanaplay</p>

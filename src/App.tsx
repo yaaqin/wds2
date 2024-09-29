@@ -19,41 +19,51 @@ import LoginForm from './page/auth/login';
 import PayFlow from './page/user/support/payFlow';
 import Registration from './page/user/registration';
 import OrderCheck from './page/user/Order';
+import HelpCenter from './page/user/support/payFlow/component/helpCenter';
+import AnimatedComponent from './page/user/animate';
+import ArticleSection from './page/user/newsDetail';
 
 const App: React.FC = () => {
   return (
     <Router>
-    <Routes>
-      {/* user path */}
-      <Route path="/" element={<UserDashboard />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="news" element={<News />} />
-        <Route path="news/all" element={<AllNews />} />
-        {/* Our Product */}
-        <Route path="hanaplay/broadband" element={<Broadband />} />
-        <Route path="hanaplay/enterprise" element={<Enterprise />} />
-        <Route path="hanaplay/business" element={<Business />} />
-        {/* secondary path */}
-        <Route path="mgm" element={<Mgm />} />
-        <Route path="registration" element={<Registration />} />
-        <Route path="order-check" element={<OrderCheck />} />
-        <Route path="support/registration-flow" element={<RegistrationFlow />} />
-        <Route path="support/how-to-pay" element={<PayFlow />} />
-      </Route>
-      {/* auth path */}
-      <Route path="/login" element={<LoginForm />}/>
+      <Routes>
+        {/* user path */}
+        <Route path="/" element={<UserDashboard />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="news" element={<News />} />
+          <Route path="news/slug" element={<ArticleSection />} />
+          <Route path="news/all" element={<AllNews />} />
+          {/* Our Product */}
+          <Route path="hanaplay/broadband" element={<Broadband />} />
+          <Route path="hanaplay/enterprise" element={<Enterprise />} />
+          <Route path="hanaplay/business" element={<Business />} />
+          {/* secondary path */}
+          <Route path="mgm" element={<Mgm />} />
+          <Route path="registration" element={<Registration />} />
+          <Route path="order-check" element={<OrderCheck />} />
+          {/* Support Path */}
+          <Route path="support/registration-flow" element={<RegistrationFlow />} />
+          <Route path="support" element={<PayFlow />}>
+          {/* <Route index element={<Faq />} /> */}
+          <Route path="help-center" element={<HelpCenter />} />
+          </Route>
+          {/* other path */}
+          <Route path="animate" element={<AnimatedComponent/>} />
+        </Route>
+        {/* auth path */}
+        <Route path="/login" element={<LoginForm />} />
 
-      {/* admin path */}
-      <Route path="/admin" element={<AdminDashboard />}>
-        <Route index element={<AdminHome />} />
-        <Route path="login" element={<LoginAdmin />} />
-      </Route>
+        {/* admin path */}
+        <Route path="/admin" element={<AdminDashboard />}>
+          <Route index element={<AdminHome />} />
+          <Route path="login" element={<LoginAdmin />} />
+        </Route>
 
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  </Router>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 

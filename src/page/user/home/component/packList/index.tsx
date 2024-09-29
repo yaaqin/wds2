@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PricingCard from './card';
 import { pricingData } from './data';
+import useGsapScrollTrigger from '../../../../../component/gsapHook';
 
 const PackList: React.FC = () => {
+  const gridRef = useRef<HTMLDivElement>(null); // Reference ke grid yang berisi card
+
+  // Gunakan hook untuk animasi stagger pada card
+  useGsapScrollTrigger(gridRef, 'bottom', {}, { from: 'start', amount: 0.3 });
   return (
     <section className="container mx-auto py-16  px-[24px]">
       <div className="text-center mb-12">
         <h2 className="text-2xl font-semibold">NEW INTERNET PACKAGES ARE HERE!</h2>
         <p className="text-gray-500">Better-than-ever Offers</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {pricingData.map((plan, index) => (
           <PricingCard
             key={index}

@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import CoverageList from './modals';
+import useGsapScrollTrigger from '../../../../../component/gsapHook';
 
 const CityCoverageSection: React.FC = () => {
     const [showModals, setShowModals] = useState(false);
+    const sectionRef = useRef<HTMLDivElement>(null);
+    useGsapScrollTrigger(sectionRef);
 
     return (
-        <div className="bg-gradient-to-r from-red-50 to-blue-100 py-8 w-full px-4 md:px-6 lg:px-8">
+        <div 
+        ref={sectionRef}
+        className="bg-gradient-to-r from-red-50 to-blue-100 py-8 w-full px-4 md:px-6 lg:px-8">
             <CoverageList showModal={showModals} CloseModal={setShowModals} />
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
                 {/* Left Content */}

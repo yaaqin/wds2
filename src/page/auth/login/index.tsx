@@ -19,7 +19,7 @@ const LoginForm: React.FC = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 via-blue-100 to-blue-100 text-center">
             <Upcoming showModal={upcoming} CloseModal={setUpcoming} />
-            <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
+            <div className="p-8 rounded-xl shadow-md w-full max-w-md bg-white/30 backdrop-blur-lg">
                 <div className="flex justify-center mb-6">
                     <img src="https://www.wds.co.id/wp-content/uploads/2024/06/cropped-logo-wds-hp-15.png" alt="HanaPlay Logo" className="h-8" />
                 </div>

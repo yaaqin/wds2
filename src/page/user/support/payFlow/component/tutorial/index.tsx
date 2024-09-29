@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { FaSearch, FaChevronDown, FaComments, FaUser, FaPhone, FaEnvelope, FaWhatsapp, FaTelegram } from 'react-icons/fa';
+import { Outlet } from 'react-router-dom';
 
 const Tab: React.FC<{ label: string; active: boolean; onClick: () => void }> = ({ label, active, onClick }) => (
   <button
-    className={`px-4 py-2 font-medium ${active ? 'text-purple-600 border-b-2 border-purple-600' : 'text-gray-500'}`}
+    className={`px-4 py-2 font-medium ${active ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500'}`}
     onClick={onClick}
   >
     {label}
@@ -11,14 +12,14 @@ const Tab: React.FC<{ label: string; active: boolean; onClick: () => void }> = (
 );
 
 const SidebarItem: React.FC<{ label: string; active: boolean }> = ({ label, active }) => (
-  <div className={`py-2 px-4 ${active ? 'bg-purple-100 text-purple-600' : 'text-gray-700'} hover:bg-purple-50 cursor-pointer`}>
+  <div className={`py-2 px-4 ${active ? 'bg-blue-100 text-blue-600' : 'text-gray-700'} hover:bg-blue-50 cursor-pointer`}>
     {label}
   </div>
 );
 
 const PaymentStep: React.FC<{ number: number; description: string }> = ({ number, description }) => (
   <div className="flex flex-col items-center text-center">
-    <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold mb-2">
+    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mb-2">
       {number}
     </div>
     <p className="text-sm">{description}</p>
@@ -57,8 +58,10 @@ const TutorialSection: React.FC = () => {
           <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
         </div>
       </div>
+    
+      <Outlet/>
 
-      <div className="flex">
+      {/* <div className="flex">
         <div className="w-1/4 pr-4">
           <SidebarItem label="Channel Pembayaran" active={false} />
           <SidebarItem label="ATM" active={false} />
@@ -76,7 +79,7 @@ const TutorialSection: React.FC = () => {
               <h2 className="text-xl font-bold">Indomaret, Alfamart, Alfamidi, Lawson, Ceriamart</h2>
               <FaChevronDown className="text-gray-500" />
             </div>
-            <img alt='' src='https://www.myrepublic.co.id/_next/image?url=%2Fimg%2Fgothel%2Fuploads%2FPAYMENT_MINIMARKET_min_1d04b474aa.jpg&w=1080&q=75'></img>
+            <img alt='' src='https://www.HanaPlay.co.id/_next/image?url=%2Fimg%2Fgothel%2Fuploads%2FPAYMENT_MINIMARKET_min_1d04b474aa.jpg&w=1080&q=75'></img>
             <div className="mt-4">
               <ol className="list-decimal list-inside">
                 <li>Pelanggan datang ke minimarket</li>
@@ -87,25 +90,25 @@ const TutorialSection: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="mt-8">
-        <div className="bg-purple-100 rounded-lg p-6 flex items-center space-x-4">
+        <div className="bg-blue-100 rounded-lg p-6 flex items-center space-x-4">
           <img src="https://www.myrepublic.co.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fillustration.65aa6590.png&w=256&q=75" alt="Halo Rocketers" className="w-24 h-24" />
           <div>
-            <h3 className="text-lg font-bold text-purple-600">Halo Rocketeers!</h3>
+            <h3 className="text-lg font-bold text-blue-600">Halo Hana Friends!</h3>
             <p>Belum menemukan jawaban yang dicari? Hubungi Kami dibawah ini</p>
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4 mt-4">
-          <ContactItem icon={<FaComments className="text-purple-600" />} text="FAQ" subText="Pertanyaan seputar layanan MyRepublic" />
-          <ContactItem icon={<FaUser className="text-purple-600" />} text="Self Service" subText="Layanan mandiri melalui dashboard" />
-          <ContactItem icon={<FaPhone className="text-purple-600" />} text="Web Call" subText="Telepon customer service tanpa pulsa" />
-          <ContactItem icon={<FaPhone className="text-purple-600" />} text="1500818" subText="Telepon customer service dengan pulsa" />
-          <ContactItem icon={<FaEnvelope className="text-purple-600" />} text="cs@myrepublic.net.id" subText="Email pengaduan layanan" />
-          <ContactItem icon={<FaWhatsapp className="text-purple-600" />} text="0899 8150 0818" subText="Virtual Assistant MIRA" />
-          <ContactItem icon={<FaTelegram className="text-purple-600" />} text="@myrepublicidbot" subText="Virtual Assistant" />
+          <ContactItem icon={<FaComments className="text-blue-600" />} text="FAQ" subText="Pertanyaan seputar layanan HanaPlay" />
+          <ContactItem icon={<FaUser className="text-blue-600" />} text="Self Service" subText="Layanan mandiri melalui dashboard" />
+          <ContactItem icon={<FaPhone className="text-blue-600" />} text="Web Call" subText="Telepon customer service tanpa pulsa" />
+          <ContactItem icon={<FaPhone className="text-blue-600" />} text="1500818" subText="Telepon customer service dengan pulsa" />
+          <ContactItem icon={<FaEnvelope className="text-blue-600" />} text="cs@HanaPlay.net.id" subText="Email pengaduan layanan" />
+          <ContactItem icon={<FaWhatsapp className="text-blue-600" />} text="0899 8150 0818" subText="Virtual Assistant MIRA" />
+          <ContactItem icon={<FaTelegram className="text-blue-600" />} text="@HanaPlayidbot" subText="Virtual Assistant" />
         </div>
       </div>
     </div>
