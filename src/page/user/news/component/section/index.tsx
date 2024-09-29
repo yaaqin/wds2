@@ -18,7 +18,7 @@ const BlogSection: React.FC = () => {
             <p className="text-gray-700 mb-4">
             Hanaplay telah berhasil memperluas coverage area di daerah BSD setelah menjalin kerja sama strategis dengan HSP. Kerja sama ini memungkinkan Hanaplay untuk meningkatkan jangkauan layanan internetnya secara signifikan. Dengan kolaborasi tersebut, coverage area Hanaplay mengalami peningkatan sebesar 300%...
             </p>
-            <button className="text-blue-500 border border-blue-500 px-6 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all">
+            <button onClick={()=>navigate('/news/slug')} className="text-blue-500 border border-blue-500 px-6 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all">
               Continue Reading
             </button>
           </div>
@@ -31,7 +31,7 @@ const BlogSection: React.FC = () => {
             <p className="text-gray-700 mb-4">
               Hanaplay Broadband Internet Provider, telah hadir di BSD City. Internet BSD Super Cepat dan Terbaik Setiap Saat Hanaplay untuk anda yang mau menikmati kecepatan WiFi dengan harga langganan yang murah...
             </p>
-            <button className="text-blue-500 border border-blue-500 px-6 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all">
+            <button onClick={()=>navigate('/news/slug')} className="text-blue-500 border border-blue-500 px-6 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all">
               Continue Reading
             </button>
           </div>
@@ -44,7 +44,7 @@ const BlogSection: React.FC = () => {
             <p className="text-gray-700 mb-4">
               BSD City, 29 Juni 2024 – WDS telah hadir di Suradita, Cisauk, terpilih menjadi penyelenggara internet untuk desa Suradita, khususnya Suradita RW01. Hanaplay Broadband Internet...
             </p>
-            <button className="text-blue-500 border border-blue-500 px-6 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all">
+            <button onClick={()=>navigate('/news/slug')} className="text-blue-500 border border-blue-500 px-6 py-2 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all">
               Continue Reading
             </button>
           </div>

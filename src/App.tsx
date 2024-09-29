@@ -22,10 +22,12 @@ import OrderCheck from './page/user/Order';
 import HelpCenter from './page/user/support/payFlow/component/helpCenter';
 import AnimatedComponent from './page/user/animate';
 import ArticleSection from './page/user/newsDetail';
+import ScrollToTop from './component/scrollHook';
 
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* user path */}
         <Route path="/" element={<UserDashboard />}>
@@ -46,11 +48,11 @@ const App: React.FC = () => {
           {/* Support Path */}
           <Route path="support/registration-flow" element={<RegistrationFlow />} />
           <Route path="support" element={<PayFlow />}>
-          {/* <Route index element={<Faq />} /> */}
-          <Route path="help-center" element={<HelpCenter />} />
+            {/* <Route index element={<Faq />} /> */}
+            <Route path="help-center" element={<HelpCenter />} />
           </Route>
           {/* other path */}
-          <Route path="animate" element={<AnimatedComponent/>} />
+          <Route path="animate" element={<AnimatedComponent />} />
         </Route>
         {/* auth path */}
         <Route path="/login" element={<LoginForm />} />

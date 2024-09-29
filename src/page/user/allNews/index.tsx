@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import NextComp from './component/nextComp';
-import FirstThree from './component/3first';
 import Other from './component/other';
 import Head from './component/head';
+import MainCard from './component/mainCard';
 
 const PaginatedComponent: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,7 +21,7 @@ const PaginatedComponent: React.FC = () => {
 
       {currentPage === 1 ? (
         <>
-          <FirstThree />
+          <MainCard />
           <Other />
         </>
       ) : (
@@ -29,7 +29,7 @@ const PaginatedComponent: React.FC = () => {
       )}
 
       {/* Pagination Controls */}
-      <div className="max-w-[1480px] mx-auto px-4 md:px-24 flex justify-end space-x-4">
+      <div className="max-w-[1480px] mx-auto flex justify-end space-x-4">
         {currentPage === 2 && (
           <button
             onClick={goToPreviousPage}
