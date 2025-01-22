@@ -23,6 +23,7 @@ import HelpCenter from './page/user/support/payFlow/component/helpCenter';
 import AnimatedComponent from './page/user/animate';
 import ArticleSection from './page/user/newsDetail';
 import ScrollToTop from './component/scrollHook';
+import CreateBlog from './page/admin/createBlog';
 
 const App: React.FC = () => {
   return (
@@ -61,6 +62,7 @@ const App: React.FC = () => {
         <Route path="/admin" element={<AdminDashboard />}>
           <Route index element={<AdminHome />} />
           <Route path="login" element={<LoginAdmin />} />
+          <Route path="create/blog" element={<CreateBlog />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />

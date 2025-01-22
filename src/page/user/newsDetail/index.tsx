@@ -8,10 +8,6 @@ type BlogContent =
   | { type: 'list'; items: string[] };
 
 const blogContent: BlogContent[] = [
-  // {
-  //   type: "header", // Tipe konten
-  //   content: "The messy WordPress drama, explained",
-  // },
   {
     type: "paragraph",
     content: "Saat ini, banyak perhatian tertuju pada Web3 karena siklus Bitcoin yang berulang, yang menunjukkan potensi signifikan dalam inovasi teknologi blockchain dan desentralisasi, memberikan harapan baru untuk masa depan ekonomi digital yang lebih transparan dan terjangkau.’",

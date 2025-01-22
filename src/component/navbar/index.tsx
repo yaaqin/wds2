@@ -19,7 +19,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ to, children, onClick }) => {
     };
 
     return (
-        <menu 
+        <menu
             onClick={handleClick}
             className={`cursor-pointer text-[16px] ${location.pathname === to ? 'text-blue-500' : 'hover:text-blue-500'}`}
         >
@@ -41,10 +41,10 @@ const Navbar: React.FC = () => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
         };
-        
+
         window.addEventListener('resize', handleResize);
         handleResize();
-        
+
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
@@ -107,7 +107,9 @@ const Navbar: React.FC = () => {
             <hr className="hidden md:block" />
 
             {/* Sticky Navbar Section */}
-            <section className="sticky top-0 z-50 bg-white px-[24px] flex justify-between items-center py-4">
+            <section
+             ref={dropdownRef}
+             className="sticky top-0 z-50 bg-white px-[24px] flex justify-between items-center h-full">
                 {/* Logo */}
                 <div className="flex items-center">
                     <img onClick={() => navigate('/')} src="/assets/img/logo.png" alt="WDS Logo" className="h-12 cursor-pointer" />
@@ -122,23 +124,73 @@ const Navbar: React.FC = () => {
 
                 {/* Navigation for Desktop */}
                 {!isMobile && (
-                    <nav className="flex gap-[48px] text-lg font-semibold">
+                    <nav className="flex gap-[48px] text-lg font-semibold h-full bg-white-500 py-6">
                         <MenuItem to="/">HOME</MenuItem>
                         <MenuItem to="/about">ABOUT</MenuItem>
-                        <div 
-                            ref={dropdownRef}
-                            className="relative"
+                        <div
+                            className="h-full"
                             onMouseEnter={() => setShowDropdown(true)}
                             onMouseLeave={() => setShowDropdown(false)}
                         >
-                            <menu className={`truncate cursor-pointer text-[16px] ${location.pathname.includes('/hanaplay') ? 'text-blue-500' : 'hover:text-blue-500'}`}>
+                            <menu
+                                className={`truncate cursor-pointer text-[16px] ${location.pathname.includes('/hanaplay') ? 'text-blue-500' : 'hover:text-blue-500'
+                                    }`}
+                            >
                                 OUR PRODUCT
                             </menu>
                             {showDropdown && (
-                                <div className="absolute left-0 w-48 bg-gray-700 text-white shadow-lg rounded-lg py-2 px-4">
-                                    <MenuItem to="/hanaplay/broadband">Broadband Residential</MenuItem>
-                                    <MenuItem to="/hanaplay/enterprise">Enterprise Business Internet</MenuItem>
-                                    <MenuItem to="/hanaplay/business">Broadband Business</MenuItem>
+                                <div
+                                    className="absolute left-0 top-full bg-gray-600 text-white shadow-lg py-6 mt-[-25px]"
+                                    style={{
+                                        width: '100vw', // Full width
+                                        position: 'absolute',
+                                        zIndex: 50,
+                                    }}
+                                >
+                                    <div className="container mx-auto px-6">
+                                        <h2 className="text-4xl font-bold mb-4">Our Product</h2>
+                                        <div className="grid grid-cols-3 gap-6">
+                                            {/* Category 1 */}
+                                            <div>
+                                                <h3 className="text-2xl text-red-500 font-bold shadow-xl mb-2">Office</h3>
+                                                <ul>
+                                                    <li className="py-1 hover:underline">
+                                                        <a href="/hanaplay/broadband">Broadband Residential</a>
+                                                    </li>
+                                                    <li className="py-1 hover:underline">
+                                                        <a href="/hanaplay/enterprise">Enterprise Business Internet</a>
+                                                    </li>
+                                                    <li className="py-1 hover:underline">
+                                                        <a href="/hanaplay/business">Broadband Business</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            {/* Category 2 */}
+                                            <div>
+                                                <h3 className="text-2xl text-red-500 font-bold shadow-xl mb-2">Hotel & Apartment</h3>
+                                                <ul>
+                                                    <li className="py-1 hover:underline">
+                                                        <a href="#">Atria Hotel</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            {/* Category 3 */}
+                                            <div>
+                                                <h3 className="text-2xl text-red-500 font-bold shadow-xl mb-2">Retail</h3>
+                                                <ul>
+                                                    <li className="py-1 hover:underline">
+                                                        <a href="#">Golden Park 2 </a>
+                                                    </li>
+                                                    <li className="py-1 hover:underline">
+                                                        <a href="#">Golden Park 3 </a>
+                                                    </li>
+                                                    <li className="py-1 hover:underline">
+                                                        <a href="#">Desa Suradita, Cisauk </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             )}
                         </div>
@@ -159,7 +211,7 @@ const Navbar: React.FC = () => {
                             <MenuItem to="/" onClick={closeMenu}>HOME</MenuItem>
                             <MenuItem to="/about" onClick={closeMenu}>ABOUT</MenuItem>
                             <div className="relative">
-                                <menu 
+                                <menu
                                     onClick={() => setShowDropdown(!showDropdown)}
                                     className={`cursor-pointer text-[16px] ${location.pathname.includes('/hanaplay') ? 'text-blue-500' : 'hover:text-blue-500'}`}
                                 >
