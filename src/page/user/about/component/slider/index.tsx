@@ -43,7 +43,7 @@ const App: React.FC = () => {
   ];
 
   const slider2Images = [
-    '/assets/img/partner2/angkasapura.jpg',
+    '/assets/img/partner2/angkasaPura.jpg',
     '/assets/img/partner2/cimb.jpg',
     '/assets/img/partner2/indace.jpg',
     '/assets/img/partner2/japfa.jpg',
