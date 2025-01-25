@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { GearIcon, SignalIcon, SpeeedIcon, SupportIcon } from './icon';
-import useGsapScrollTrigger from '../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../hook/gsapHook';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -32,7 +32,7 @@ const Features: React.FC = () => {
   // Gunakan hook untuk animasi stagger pada card
   useGsapScrollTrigger(gridRef, 'bottom', {}, { from: 'start', amount: 0.3 });
   return (
-    <div className="bg-gradient-to-r w-full from-purple-400 via-purple-500 to-purple-600 py-16">
+    <div className="bg-gradient-to-r w-full from-purple-400 via-purple-500 to-purple-600 py-16 px-4 md:px-0">
       <div ref={gridRef} className="max-w-[1480px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <FeatureCard
           icon={<SupportIcon />}

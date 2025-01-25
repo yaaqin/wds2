@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import CoverageList from './modals';
-import useGsapScrollTrigger from '../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../hook/gsapHook';
 
 const CityCoverageSection: React.FC = () => {
     const [showModals, setShowModals] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import PricingCard from './card';
 import { pricingData } from './data';
-import useGsapScrollTrigger from '../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../hook/gsapHook';
 
 const PackList: React.FC = () => {
   const gridRef = useRef<HTMLDivElement>(null); // Reference ke grid yang berisi card

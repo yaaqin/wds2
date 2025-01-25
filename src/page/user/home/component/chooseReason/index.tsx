@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import useGsapScrollTrigger from '../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../hook/gsapHook';
 
 const ChooseReason: React.FC = () => {
   const leftRef = useRef<HTMLDivElement>(null);
@@ -11,7 +11,7 @@ const ChooseReason: React.FC = () => {
   // Gunakan hook untuk bagian kanan (geser dari kanan)
   useGsapScrollTrigger(rightRef, 'right');
   return (
-    <section className="container mx-auto py-16 flex items-center">
+    <section className="container mx-auto py-16 flex items-center px-4 md:px-0">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
         {/* Bagian Kiri - Gambar */}
         <div 

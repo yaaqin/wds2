@@ -111,8 +111,8 @@ const Navbar: React.FC = () => {
              ref={dropdownRef}
              className="sticky top-0 z-50 bg-white px-[24px] flex justify-between items-center h-full">
                 {/* Logo */}
-                <div className="flex items-center">
-                    <img onClick={() => navigate('/')} src="/assets/img/logo.png" alt="WDS Logo" className="h-12 cursor-pointer" />
+                <div className="flex items-center py-2 md:py-0">
+                    <img onClick={() => navigate('/')} src="/assets/img/logo.png" alt="WDS Logo" className="h-8 md:h-12 cursor-pointer" />
                 </div>
 
                 {/* Hamburger Menu for Mobile */}

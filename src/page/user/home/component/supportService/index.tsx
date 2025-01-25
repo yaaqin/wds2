@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { FaHeadset, FaComments, FaMapMarkedAlt } from 'react-icons/fa'; // Gunakan ikon dari react-icons
-import useGsapScrollTrigger from '../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../hook/gsapHook';
 import { useNavigate } from 'react-router-dom';
 
 const SupportService: React.FC = () => {
@@ -10,7 +10,7 @@ const SupportService: React.FC = () => {
   return (
     <section 
     ref={sectionRef}
-    className="bg-blue-900 w-full text-white py-16">
+    className="bg-blue-900 w-full text-white py-16 px-4 md:px-0">
       <div className="container mx-auto text-center">
         {/* Pertanyaan */}
         <h2 className="text-xl font-light mb-2">Have you any questions</h2>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import NormalCard from '../normalCard'
-import useGsapScrollTrigger from '../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../hook/gsapHook';
 
 export default function NextComp() {
   const gridRef = useRef<HTMLDivElement>(null); 

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { ArrowRight, LogIn, DownloadCloud, CreditCard, LucideIcon } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import useGsapScrollTrigger from '../../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../../hook/gsapHook';
 
 interface SubscriptionStepProps {
   icon: React.ReactElement<LucideIcon>;
@@ -60,7 +60,7 @@ const HanaPlaySubscription: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-gradient-to-r from-red-50 to-blue-100 p-8 rounded-tl-[48px] rounded-tr-0 rounded-bl-0 rounded-br-[48px] max-w-4xl mx-auto my-8">
+      className="bg-gradient-to-r from-red-50 to-blue-100 p-8 rounded-tl-0 md:rounded-tl-[48px] rounded-tr-0 rounded-bl-0 rounded-br-0 md:rounded-br-[48px] max-w-4xl mx-auto my-8">
       <h2 className="text-2xl font-bold text-center mb-2">Cara Berlangganan di HanaPlay</h2>
       <p className="text-center mb-8">Tiga langkah mudah untuk menggunakan layanan dari kami</p>
 

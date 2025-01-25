@@ -20,11 +20,11 @@ const Heading: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
         {/* Title */}
-        <h1 className="text-[48px] font-bold capitalize">{location.pathname.substring(1).replace(/\//g, ' / ')}</h1>
+        <h1 className="text-[48px] font-bold capitalize text-center">{location.pathname.substring(1).replace(/\//g, ' / ')}</h1>
 
         {/* Breadcrumb */}
         <div className="flex items-center space-x-2 mt-2 text-sm">
-          <p onClick={()=>navigate('/')} className="hover:underline">
+          <p onClick={()=>navigate('/')} className="hover:underline cursor-pointer">
             Home
           </p>
           <span>/</span>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const IpTv: React.FC = () => {
     return (
-        <div className="bg-white py-12">
+        <div className="bg-white py-12 px-4 md:px-0">
             <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row gap-8 items-center">
                 <div className="relative w-full md:w-1/2">
                     <img

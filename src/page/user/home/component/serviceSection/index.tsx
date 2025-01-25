@@ -3,15 +3,15 @@ import { FaCloud, FaGlobe, FaNetworkWired, FaShieldAlt } from 'react-icons/fa';
 import ServiceCard from './card';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import useGsapScrollTrigger from '../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../hook/gsapHook';
 
 const ServiceSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   useGsapScrollTrigger(sectionRef);
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className="container mx-auto py-16 text-center">
+      className="container mx-auto py-16 text-center px-4 md:px-0">
       {/* Judul utama */}
       <h2 className="text-2xl font-semibold mb-4">Hanaplay Broadband Internet</h2>
       <p className="text-gray-500 mb-12">Network Solutions from Hanaplay</p>
@@ -24,7 +24,7 @@ const ServiceSection: React.FC = () => {
           title="Cloud & Collocation"
           description="Hosting & Domain, Virtual Private Server, Collocation, Direct Connect"
         />
-        
+
         {/* Layanan Fiber Connection */}
         <ServiceCard
           icon={<FaGlobe />}

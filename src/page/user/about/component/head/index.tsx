@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import useGsapScrollTrigger from '../../../../../component/gsapHook';
+import useGsapScrollTrigger from '../../../../../hook/gsapHook';
 
 const BenefitsSection: React.FC = () => {
   const leftRef = useRef<HTMLDivElement>(null);
