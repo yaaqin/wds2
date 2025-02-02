@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
              ref={dropdownRef}
              className="sticky top-0 z-50 bg-white px-[24px] flex justify-between items-center h-full">
                 {/* Logo */}
-                <div className="flex items-center py-2 md:py-0">
+                <div className="flex items-center md:py-0">
                     <img onClick={() => navigate('/')} src="/assets/img/logo.png" alt="WDS Logo" className="h-8 md:h-12 cursor-pointer" />
                 </div>
 
@@ -124,11 +124,11 @@ const Navbar: React.FC = () => {
 
                 {/* Navigation for Desktop */}
                 {!isMobile && (
-                    <nav className="flex gap-[48px] text-lg font-semibold h-full bg-white-500 py-6">
+                    <nav className="flex gap-[48px] text-lg font-semibold bg-white-500 items-center">
                         <MenuItem to="/">HOME</MenuItem>
                         <MenuItem to="/about">ABOUT</MenuItem>
                         <div
-                            className="h-full"
+                            className="py-6"
                             onMouseEnter={() => setShowDropdown(true)}
                             onMouseLeave={() => setShowDropdown(false)}
                         >
@@ -140,7 +140,7 @@ const Navbar: React.FC = () => {
                             </menu>
                             {showDropdown && (
                                 <div
-                                    className="absolute left-0 top-full bg-gray-600 text-white shadow-lg py-6 mt-[-25px]"
+                                className="absolute left-0 top-full bg-gradient-to-r from-red-50/50 to-blue-100/50 backdrop-blur-md text-white shadow-lg py-6 rounded-lg"
                                     style={{
                                         width: '100vw', // Full width
                                         position: 'absolute',
@@ -148,43 +148,43 @@ const Navbar: React.FC = () => {
                                     }}
                                 >
                                     <div className="container mx-auto px-6">
-                                        <h2 className="text-4xl font-bold mb-4">Our Product</h2>
+                                        <h2 className="text-4xl font-bold mb-4 text-blue-500 drop-shadow-md">Our Product</h2>
                                         <div className="grid grid-cols-3 gap-6">
                                             {/* Category 1 */}
                                             <div>
-                                                <h3 className="text-2xl text-red-500 font-bold shadow-xl mb-2">Office</h3>
+                                                <h3 className="text-2xl text-blue-500 font-bold underline drop-shadow-xl mb-2">Office</h3>
                                                 <ul>
-                                                    <li className="py-1 hover:underline">
+                                                    <li className="py-1 hover:underline text-black">
                                                         <a href="/hanaplay/broadband">Broadband Residential</a>
                                                     </li>
-                                                    <li className="py-1 hover:underline">
+                                                    <li className="py-1 hover:underline text-black">
                                                         <a href="/hanaplay/enterprise">Enterprise Business Internet</a>
                                                     </li>
-                                                    <li className="py-1 hover:underline">
+                                                    <li className="py-1 hover:underline text-black">
                                                         <a href="/hanaplay/business">Broadband Business</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                             {/* Category 2 */}
                                             <div>
-                                                <h3 className="text-2xl text-red-500 font-bold shadow-xl mb-2">Hotel & Apartment</h3>
+                                                <h3 className="text-2xl text-blue-500 font-bold underline drop-shadow-xl mb-2">Hotel & Apartment</h3>
                                                 <ul>
-                                                    <li className="py-1 hover:underline">
+                                                    <li className="py-1 hover:underline text-black">
                                                         <a href="#">Atria Hotel</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                             {/* Category 3 */}
                                             <div>
-                                                <h3 className="text-2xl text-red-500 font-bold shadow-xl mb-2">Retail</h3>
+                                                <h3 className="text-2xl text-blue-500 font-bold underline drop-shadow-xl mb-2">Retail</h3>
                                                 <ul>
-                                                    <li className="py-1 hover:underline">
+                                                    <li className="py-1 hover:underline text-black">
                                                         <a href="#">Golden Park 2 </a>
                                                     </li>
-                                                    <li className="py-1 hover:underline">
+                                                    <li className="py-1 hover:underline text-black">
                                                         <a href="#">Golden Park 3 </a>
                                                     </li>
-                                                    <li className="py-1 hover:underline">
+                                                    <li className="py-1 hover:underline text-black">
                                                         <a href="#">Desa Suradita, Cisauk </a>
                                                     </li>
                                                 </ul>
@@ -195,7 +195,7 @@ const Navbar: React.FC = () => {
                             )}
                         </div>
                         <MenuItem to="/news">NEWS</MenuItem>
-                        <MenuItem to="/contact">CONTACTS</MenuItem>
+                        <MenuItem to="/contact">CONTACT</MenuItem>
                     </nav>
                 )}
             </section>

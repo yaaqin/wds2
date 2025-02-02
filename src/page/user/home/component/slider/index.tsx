@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface ImageSliderProps {
   images: string[];
@@ -11,6 +11,13 @@ const Slider: React.FC<ImageSliderProps> = ({ images }) => {
     setCurrentIndex(index);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Ganti gambar setiap 3 detik
+
+    return () => clearInterval(interval); // Hapus interval saat komponen unmount
+  }, [images.length]);
   return (
     <div className="w-full mx-auto">
       <div className="relative">

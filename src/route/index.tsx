@@ -18,7 +18,7 @@ import Broadband from "../page/user/ourProduct/broadband";
 import AllNews from "../page/user/allNews";
 import ArticleSection from "../page/user/newsDetail";
 import News from "../page/user/news";
-import { Contact } from "lucide-react";
+import Contact from "../page/user/contact"
 
 const LoadingFallback = () => <p>Loading...</p>;
 
