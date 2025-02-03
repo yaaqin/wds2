@@ -1,3 +1,5 @@
+import React from "react"
+
 export const LoveIcon = () => (
     <svg
         width="30px"

@@ -6,7 +6,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 const useGsapScrollTrigger = (
   elementRef: RefObject<HTMLElement>, 
   animationDirection: 'left' | 'right' | 'top' | 'bottom' = 'bottom', // Default dari bawah
-  options: gsap.plugins.ScrollTriggerInstanceVars = {},
+  options: gsap.plugins.ScrollTrigger = {},
   staggerOptions: gsap.StaggerVars = {}
 ) => {
   useEffect(() => {
@@ -41,6 +41,7 @@ const useGsapScrollTrigger = (
               start: "top 80%", // Mulai animasi saat elemen mencapai 80% dari viewport
               toggleActions: "play reverse play reverse", // Animasi berjalan saat scroll ke atas/bawah
               ...options, // Override atau tambahan opsi ScrollTrigger
+              
             },
           }
         );
@@ -58,8 +59,9 @@ const useGsapScrollTrigger = (
             scrollTrigger: {
               trigger: elementRef.current, // Elemen yang memicu animasi
               start: "top 80%", // Mulai animasi saat elemen mencapai 80% dari viewport
+              ...options, // Override atau tambahan opsi ScrollTrigger dari param
+              
               toggleActions: "play reverse play reverse", // Animasi berjalan saat scroll ke atas/bawah
-              ...options, // Override atau tambahan opsi ScrollTrigger dari parameter
             },
           }
         );

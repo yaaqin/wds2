@@ -31,7 +31,7 @@ const SubscriptionStep: React.FC<SubscriptionStepProps> = ({ icon, title, descri
 };
 
 const HanaPlaySubscription: React.FC = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
   useGsapScrollTrigger(sectionRef);
   const steps: SubscriptionStepProps[] = [
     {

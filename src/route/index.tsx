@@ -1,26 +1,28 @@
-import { Suspense, lazy } from "react";
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import UserDashboard from "./userDashboard";
-import Home from "../page/user/home";
-import About from "../page/user/about";
-import NotFound from "../page/user/404page";
-import LoginForm from "../page/auth/login";
-import AnimatedComponent from "../page/user/animate";
-import HelpCenter from "../page/user/support/payFlow/component/helpCenter";
-import PayFlow from "../page/user/support/payFlow";
-import RegistrationFlow from "../page/user/support/registratiotonFlow";
-import OrderCheck from "../page/user/Order";
-import Registration from "../page/user/registration";
-import Mgm from "../page/user/mgm";
-import Business from "../page/user/ourProduct/business";
-import Enterprise from "../page/user/ourProduct/enterprice";
-import Broadband from "../page/user/ourProduct/broadband";
-import AllNews from "../page/user/allNews";
-import ArticleSection from "../page/user/newsDetail";
-import News from "../page/user/news";
-import Contact from "../page/user/contact"
+import { lazy, Suspense } from "react";
 
-const LoadingFallback = () => <p>Loading...</p>;
+const AnimatedComponent = lazy(() => import("../page/user/animate"));
+const HelpCenter = lazy(() => import("../page/user/support/payFlow/component/helpCenter"));
+const PayFlow = lazy(() => import("../page/user/support/payFlow"));
+const RegistrationFlow = lazy(() => import("../page/user/support/registratiotonFlow"));
+const OrderCheck = lazy(() => import("../page/user/Order"));
+const Registration = lazy(() => import("../page/user/registration"));
+const Mgm = lazy(() => import("../page/user/mgm"));
+const Business = lazy(() => import("../page/user/ourProduct/business"));
+const Enterprise = lazy(() => import("../page/user/ourProduct/enterprice"));
+const Broadband = lazy(() => import("../page/user/ourProduct/broadband"));
+const AllNews = lazy(() => import("../page/user/allNews"));
+const ArticleSection = lazy(() => import("../page/user/newsDetail"));
+const News = lazy(() => import("../page/user/news"));
+const Contact = lazy(() => import("../page/user/contact"));
+const UserDashboard = lazy(() => import("./userDashboard"));
+const Home = lazy(() => import("../page/user/home"));
+const About = lazy(() => import("../page/user/about"));
+const NotFound = lazy(() => import("../page/user/404page"));
+const LoginForm = lazy(() => import("../page/auth/login"));
+
+const LoadingFallback = () => <div>Loading...</div>;
 
 export const AppRoutes = createBrowserRouter([
     {

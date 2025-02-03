@@ -1,3 +1,4 @@
+import React from 'react'
 import SupportService from './component/supportService'
 import ChooseReason from './component/chooseReason'
 import PackList from './component/packList'

@@ -1,16 +1,11 @@
 module.exports = {
-    webpack: {
-      configure: {
-        // Contoh: Override konfigurasi webpack di sini
-        resolve: {
-          fallback: {
-            fs: false, // Contoh: Nonaktifkan polyfill untuk modul 'fs'
-          },
-        },
-      },
+  babel: {
+    presets: ['@babel/preset-env', '@babel/preset-react'],
+  },
+  webpack: {
+    configure: (webpackConfig) => {
+      // Custom Webpack configuration
+      return webpackConfig;
     },
-    babel: {
-      // Contoh: Override konfigurasi Babel di sini
-      presets: ["@babel/preset-env", "@babel/preset-react"],
-    },
-  };
+  },
+};
