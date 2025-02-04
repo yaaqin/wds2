@@ -1,6 +1,8 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import NotFound from "../page/user/404page";
+import LoginForm from "../page/auth/login";
 
 const AnimatedComponent = lazy(() => import("../page/user/animate"));
 const HelpCenter = lazy(() => import("../page/user/support/payFlow/component/helpCenter"));
@@ -19,8 +21,7 @@ const Contact = lazy(() => import("../page/user/contact"));
 const UserDashboard = lazy(() => import("./userDashboard"));
 const Home = lazy(() => import("../page/user/home"));
 const About = lazy(() => import("../page/user/about"));
-const NotFound = lazy(() => import("../page/user/404page"));
-const LoginForm = lazy(() => import("../page/auth/login"));
+
 
 const LoadingFallback = () => <div>Loading...</div>;
 
