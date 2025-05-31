@@ -1,4 +1,4 @@
-//News type
+//News type ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 const baseURL: string = 'backendUrl'
 
@@ -132,7 +132,7 @@ interface newsListState {
     pagination: paginationState
 }
 
-//search & category
+//search & category ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 const searchNews = async () => { //endpoint search
     const keywoard = 'Crypto'
@@ -157,7 +157,7 @@ const newsByCategory = async () => { //endpoint finsd news by category
 }
 
 
-//Role
+//Role ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Role ada 3 (GodAdmin, SuperAdmin, dan Admin) => For Panel
 
@@ -167,9 +167,92 @@ const newsByCategory = async () => { //endpoint finsd news by category
 
 //Admin Create News
 
+type payloadCreateAdminState = {
+    role: string
+    username: string // superadmin || admin
+    password: string
+    photoProfile?: File | null
+}
+
+const payloadCreateAdmin: payloadCreateAdminState = {
+    role: 'admin', // superadmin || admin
+    username: 'yaaqin', //min 5 character
+    password: 'Yaaqin123#'
+}
+
+const createAdmin = async () => { //give default profile as null
+    try {
+        const response = await fetch(`${baseURL}/admin`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payloadCreateAdmin)
+        });
+        const res = await response.json()
+        console.log(res)
+    } catch (error) {
+
+    }
+} //post
+
+const payloadUpdateAdmin: payloadCreateAdminState = {
+    role: 'admin', 
+    username: 'yaaqin', 
+    password: 'Yaaqin123#',
+    photoProfile: null //file here
+}
+
+const updateAdmin = async () => { 
+    try {
+        const response = await fetch(`${baseURL}/admin`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payloadUpdateAdmin)
+        });
+        const res = await response.json()
+        console.log(res)
+    } catch (error) {
+
+    }
+} //put
+
+type profileState = {
+    role: string
+    username: string 
+    password: string
+    photoProfile: string
+}
+
+interface aksesListState {
+    data: profileState[]
+    pagination: paginationState
+}
+
+const aksesList = async () => {
+    try {
+        const response = await fetch(`${baseURL}/admin`);
+        const res: aksesListState = await response.json()
+        console.log(res)
+    } catch (error) {
+
+    }
+} // get
+
+const adminProfile = async () => { //optional get detail profile by decode token
+    try {
+        const response = await fetch(`${baseURL}/admin/profile`);
+        const res: profileState = await response.json()
+        console.log(res)
+    } catch (error) {
+
+    }
+} // get
 
 
-//Coverage Area
+//Coverage Area ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 type AddCvgAreaState = {
     id?: number // require include in data list
@@ -196,7 +279,7 @@ const cvgAreaList = async () => { //endpoint search
 }
 
 
-//Retail
+//Retail ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 type retailState = {
     name: string
@@ -223,7 +306,7 @@ const retailList = async () => { //endpoint search
     }
 }
 
-//Hotel & Apartment
+//Hotel & Apartment ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 type HotelAndApartmentState = {
     name: string
@@ -254,7 +337,7 @@ const hotelAndApartmentList = async () => { //endpoint search
 
 
 
-//Internet Package
+//Internet Package ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //PackageType list
 
