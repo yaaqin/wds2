@@ -1,6 +1,6 @@
 //News type ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-const baseURL: string = 'backendUrl'
+export const baseURL: string = 'backendUrl'
 
 interface newsCategoryState { //CRUD
     id: number;

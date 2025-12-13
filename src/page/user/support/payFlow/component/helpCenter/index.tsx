@@ -1,5 +1,5 @@
+import { WhatsappIcon } from "hugeicons-react";
 import React, { useState, useRef } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 interface AccordionItemProps {
   title: string;
@@ -18,9 +18,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content }) => {
       >
         <span className="text-gray-800">{title}</span>
         {isOpen ? (
-          <FaChevronUp className="text-gray-600" />
+          <WhatsappIcon className="text-gray-600" />
         ) : (
-          <FaChevronDown className="text-gray-600" />
+          <WhatsappIcon className="text-gray-600" />
         )}
       </button>
 

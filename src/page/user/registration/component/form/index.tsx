@@ -1,5 +1,5 @@
+import { WhatsappBusinessIcon } from 'hugeicons-react';
 import React, { useState } from 'react';
-import { FaExclamationTriangle, FaHome, FaBuilding, FaBriefcase, FaChevronDown } from 'react-icons/fa';
 
 interface SidebarItemProps {
     label: string;
@@ -35,7 +35,7 @@ const RegistrationForm: React.FC = () => {
                     {/* Warning Message */}
                     <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6">
                         <div className="flex">
-                            <FaExclamationTriangle className="flex-shrink-0 h-5 w-5 text-yellow-500 mr-2" />
+                            <WhatsappBusinessIcon className="flex-shrink-0 h-5 w-5 text-yellow-500 mr-2" />
                             <p>Wajib mengisi data diri terlebih dahulu kemudian kamu bisa memilih lokasi pemasangan dan paket yang kamu inginkan</p>
                         </div>
                     </div>
@@ -87,9 +87,9 @@ const RegistrationForm: React.FC = () => {
                             </label>
                             <div className="flex space-x-4">
                                 {[
-                                    { icon: <FaHome />, label: 'Perumahan' },
-                                    { icon: <FaBuilding />, label: 'Apartemen' },
-                                    { icon: <FaBriefcase />, label: 'Bisnis' },
+                                    { icon: <WhatsappBusinessIcon />, label: 'Perumahan' },
+                                    { icon: <WhatsappBusinessIcon />, label: 'Apartemen' },
+                                    { icon: <WhatsappBusinessIcon />, label: 'Bisnis' },
                                 ].map((need) => (
                                     <button
                                         key={need.label}
@@ -116,7 +116,7 @@ const RegistrationForm: React.FC = () => {
                         <div className="mb-4">
                             <div className="flex justify-between items-center">
                                 <h3 className="font-bold">Lokasi Pemasangan</h3>
-                                <FaChevronDown className="text-gray-400" />
+                                <WhatsappBusinessIcon className="text-gray-400" />
                             </div>
                             <p className="text-sm text-gray-500">Cek apakah HanaPlay sudah mencakup lokasi Kamu</p>
                         </div>
@@ -125,7 +125,7 @@ const RegistrationForm: React.FC = () => {
                         <div className="mb-4">
                             <div className="flex justify-between items-center">
                                 <h3 className="font-bold">Pilih Paket</h3>
-                                <FaChevronDown className="text-gray-400" />
+                                <WhatsappBusinessIcon className="text-gray-400" />
                             </div>
                             <p className="text-sm text-gray-500">Kami sediakan banyak paket sesuai dengan kebutuhan kamu</p>
                         </div>
@@ -134,7 +134,7 @@ const RegistrationForm: React.FC = () => {
                         <div className="mb-4">
                             <div className="flex justify-between items-center">
                                 <h3 className="font-bold">Makin Hemat Dengan Promo</h3>
-                                <FaChevronDown className="text-gray-400" />
+                                <WhatsappBusinessIcon className="text-gray-400" />
                             </div>
                             <p className="text-sm text-gray-500">Yuk masukkan kode promo untuk mendapatkan promo menarik dari kami</p>
                             <div className="flex mt-2">

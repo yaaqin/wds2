@@ -1,5 +1,5 @@
+import { WhatsappIcon } from 'hugeicons-react';
 import React from 'react';
-import { FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 interface SocialIconProps {
   href: string;
@@ -24,10 +24,10 @@ const Footer: React.FC = () => {
 
           {/* Ikon Social Media */}
           <div className="flex justify-center md:justify-end gap-6 items-center">
-            <SocialIcon href="#" icon={<FaTwitter size={24} />} />
-            <SocialIcon href="#" icon={<FaFacebookF size={24} />} />
-            <SocialIcon href="#" icon={<FaInstagram size={24} />} />
-            <SocialIcon href="#" icon={<FaYoutube size={24} />} />
+            <SocialIcon href="#" icon={<WhatsappIcon size={24} />} />
+            <SocialIcon href="#" icon={<WhatsappIcon size={24} />} />
+            <SocialIcon href="#" icon={<WhatsappIcon size={24} />} />
+            <SocialIcon href="#" icon={<WhatsappIcon size={24} />} />
           </div>
         </div>
 

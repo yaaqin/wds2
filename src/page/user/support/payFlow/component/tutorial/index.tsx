@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { FaSearch, FaChevronDown, FaComments, FaUser, FaPhone, FaEnvelope, FaWhatsapp, FaTelegram } from 'react-icons/fa';
+import { WhatsappIcon } from 'hugeicons-react';
+import React, { ReactElement, useState } from 'react';
+// import { FaSearch, FaChevronDown, WhatsappIcon, FaUser, FaPhone, FaEnvelope, FaWhatsapp, FaTelegram } from 'react-icons/fa';
 import { Outlet } from 'react-router-dom';
 
 const Tab: React.FC<{ label: string; active: boolean; onClick: () => void }> = ({ label, active, onClick }) => (
@@ -26,7 +27,7 @@ const PaymentStep: React.FC<{ number: number; description: string }> = ({ number
   </div>
 );
 
-const ContactItem: React.FC<{ icon: React.ReactNode; text: string; subText?: string }> = ({ icon, text, subText }) => (
+const ContactItem: React.FC<{ icon: ReactElement; text: string; subText?: string }> = ({ icon, text, subText }) => (
   <div className="flex items-center space-x-2 py-2">
     {icon}
     <div>
@@ -55,7 +56,7 @@ const TutorialSection: React.FC = () => {
             placeholder="Cari Topik Bantuan"
             className="pl-10 pr-4 py-2 border rounded-full"
           />
-          <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <WhatsappIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
         </div>
       </div>
     
@@ -102,13 +103,13 @@ const TutorialSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-4 mt-4">
-          <ContactItem icon={<FaComments className="text-blue-600" />} text="FAQ" subText="Pertanyaan seputar layanan HanaPlay" />
-          <ContactItem icon={<FaUser className="text-blue-600" />} text="Self Service" subText="Layanan mandiri melalui dashboard" />
-          <ContactItem icon={<FaPhone className="text-blue-600" />} text="Web Call" subText="Telepon customer service tanpa pulsa" />
-          <ContactItem icon={<FaPhone className="text-blue-600" />} text="1500818" subText="Telepon customer service dengan pulsa" />
-          <ContactItem icon={<FaEnvelope className="text-blue-600" />} text="cs@HanaPlay.net.id" subText="Email pengaduan layanan" />
-          <ContactItem icon={<FaWhatsapp className="text-blue-600" />} text="0899 8150 0818" subText="Virtual Assistant MIRA" />
-          <ContactItem icon={<FaTelegram className="text-blue-600" />} text="@HanaPlayidbot" subText="Virtual Assistant" />
+          <ContactItem icon={<WhatsappIcon className="text-blue-600" />} text="FAQ" subText="Pertanyaan seputar layanan HanaPlay" />
+          <ContactItem icon={<WhatsappIcon className="text-blue-600" />} text="Self Service" subText="Layanan mandiri melalui dashboard" />
+          <ContactItem icon={<WhatsappIcon className="text-blue-600" />} text="Web Call" subText="Telepon customer service tanpa pulsa" />
+          <ContactItem icon={<WhatsappIcon className="text-blue-600" />} text="1500818" subText="Telepon customer service dengan pulsa" />
+          <ContactItem icon={<WhatsappIcon className="text-blue-600" />} text="cs@HanaPlay.net.id" subText="Email pengaduan layanan" />
+          <ContactItem icon={<WhatsappIcon className="text-blue-600" />} text="0899 8150 0818" subText="Virtual Assistant MIRA" />
+          <ContactItem icon={<WhatsappIcon className="text-blue-600" />} text="@HanaPlayidbot" subText="Virtual Assistant" />
         </div>
       </div>
     </div>

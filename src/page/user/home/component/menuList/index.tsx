@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import { FaWifi, FaTv, FaGamepad, FaHourglassHalf, FaTachometerAlt, FaHeadset } from 'react-icons/fa';
 import useGsapScrollTrigger from '../../../../../hook/gsapHook';
+import { WhatsappBusinessIcon } from 'hugeicons-react';
 
 export default function MenuList() {
 
@@ -14,7 +14,7 @@ export default function MenuList() {
                 {/* Internet Icon */}
                 <div className="text-center">
                     <div className="bg-blue-500 rounded-full p-3 sm:p-4 inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-                        <FaWifi className="text-white text-xl sm:text-2xl" />
+                        <WhatsappBusinessIcon className="text-white text-xl sm:text-2xl" />
                     </div>
                     <p className="mt-2 text-xs sm:text-sm max-w-[80px] mx-auto text-center leading-tight">Internet</p>
                 </div>
@@ -22,7 +22,7 @@ export default function MenuList() {
                 {/* Internet + TV Icon */}
                 <div className="text-center">
                     <div className="bg-blue-500 rounded-full p-3 sm:p-4 inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-                        <FaTv className="text-white text-xl sm:text-2xl" />
+                        <WhatsappBusinessIcon className="text-white text-xl sm:text-2xl" />
                     </div>
                     <p className="mt-2 text-xs sm:text-sm max-w-[80px] mx-auto text-center leading-tight">Internet + TV</p>
                 </div>
@@ -30,7 +30,7 @@ export default function MenuList() {
                 {/* Gamer Icon */}
                 <div className="text-center">
                     <div className="bg-blue-500 rounded-full p-3 sm:p-4 inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-                        <FaGamepad className="text-white text-xl sm:text-2xl" />
+                        <WhatsappBusinessIcon className="text-white text-xl sm:text-2xl" />
                     </div>
                     <p className="mt-2 text-xs sm:text-sm max-w-[80px] mx-auto text-center leading-tight">Gamer</p>
                 </div>
@@ -38,7 +38,7 @@ export default function MenuList() {
                 {/* Promo Icon */}
                 <div className="text-center">
                     <div className="bg-blue-500 rounded-full p-3 sm:p-4 inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-                        <FaHourglassHalf className="text-white text-xl sm:text-2xl" />
+                        <WhatsappBusinessIcon className="text-white text-xl sm:text-2xl" />
                     </div>
                     <p className="mt-2 text-xs sm:text-sm max-w-[80px] mx-auto text-center leading-tight">Promo</p>
                 </div>
@@ -46,7 +46,7 @@ export default function MenuList() {
                 {/* Speed Test Icon */}
                 <div className="text-center">
                     <div className="bg-blue-500 rounded-full p-3 sm:p-4 inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-                        <FaTachometerAlt className="text-white text-xl sm:text-2xl" />
+                        <WhatsappBusinessIcon className="text-white text-xl sm:text-2xl" />
                     </div>
                     <p className="mt-2 text-xs sm:text-sm max-w-[80px] mx-auto text-center leading-tight">Speed Test</p>
                 </div>
@@ -54,7 +54,7 @@ export default function MenuList() {
                 {/* Pengaduan 24/7 Icon */}
                 <div className="text-center">
                     <div className="bg-yellow-500 rounded-full p-3 sm:p-4 inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
-                        <FaHeadset className="text-white text-xl sm:text-2xl" />
+                        <WhatsappBusinessIcon className="text-white text-xl sm:text-2xl" />
                     </div>
                     <p className="mt-2 text-xs sm:text-sm max-w-[80px] mx-auto text-center leading-tight">Pengaduan 24/7</p>
                 </div>

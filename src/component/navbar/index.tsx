@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaBars, FaTimes } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Upcoming from '../upcomingFeature';
+import { WhatsappIcon } from 'hugeicons-react';
 
 interface MenuItemProps {
     to: string;
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
                     {/* Location */}
                     <div className="flex items-center space-x-2">
                         <div className="bg-blue-500 rounded-full p-3">
-                            <FaMapMarkerAlt className="text-white" />
+                            <WhatsappIcon className="text-white" />
                         </div>
                         <span className="text-gray-700 text-[12px]">WDS Tower, Golden Boulevard Q39, BSD City</span>
                     </div>
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
                     {/* Email */}
                     <div className="flex items-center space-x-2">
                         <div className="bg-blue-500 rounded-full p-3">
-                            <FaEnvelope className="text-white" />
+                            <WhatsappIcon className="text-white" />
                         </div>
                         <span className="text-gray-700 text-[12px]">support@wds.co.id</span>
                     </div>
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
                     {/* Phone */}
                     <div className="flex items-center space-x-2">
                         <div className="bg-blue-500 rounded-full p-3">
-                            <FaPhone className="text-white" />
+                            <WhatsappIcon className="text-white" />
                         </div>
                         <span className="text-gray-700 text-[12px]">021 538 5577</span>
                     </div>
@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
                 {/* Hamburger Menu for Mobile */}
                 {isMobile && (
                     <button onClick={toggleMenu} className="text-2xl">
-                        {isMenuOpen ? <FaTimes /> : <FaBars />}
+                        {isMenuOpen ? <WhatsappIcon /> : <WhatsappIcon />}
                     </button>
                 )}
 
@@ -205,7 +205,7 @@ const Navbar: React.FC = () => {
                 <div className={`fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
                     <div className="p-5">
                         <button onClick={toggleMenu} className="absolute top-5 right-5 text-2xl">
-                            <FaTimes />
+                            <WhatsappIcon />
                         </button>
                         <nav className="flex flex-col gap-4 mt-10">
                             <MenuItem to="/" onClick={closeMenu}>HOME</MenuItem>
