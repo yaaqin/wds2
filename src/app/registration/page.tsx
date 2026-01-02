@@ -1,9 +1,7 @@
-import React from 'react'
+import Registration from '@/src/components/pages/registration'
 
 export default function page() {
   return (
-    <div>
-      regist here
-    </div>
+    <Registration/>
   )
 }
